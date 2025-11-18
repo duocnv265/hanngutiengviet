@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Học Tiếng Trung</title>
+</head>
+<body>
+  <h1>Danh sách bài học</h1>
+  <ul>
+    {% for bai_id, bai_info in baithu.items() %}
+      <li><a href="{{ url_for('bai', bai_id=bai_id) }}">{{ bai_info.tieu_de }}</a></li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
